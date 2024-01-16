@@ -1,27 +1,22 @@
+import React from "react";
+
+const Button = (props) => {
+  const {children, variant = "bg-black"} = props;
+    return(
+      <button className={`h-10 px-6 font-semibold rounded-md ${props.variant} text-white`} type="submit"> {children}</button>
+    );
+};
+
 function App() {
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  return ( 
+  <div className="flex justify-center bg-red-400 min-h-screen items-center">
+    <div className="flex gap-3">
+      <Button variant = "bg-red-700">sign up</Button>
+      <Button variant = "bg-black">sign in</Button>
+      <Button variant = "bg-slate-700">Logout</Button>
+
+    </div>
+  </div>
   )
 }
 
